@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+  background-color: white;
+  min-height: 100vh;
+}
+
+
+
+.header{
+  background-color: rgb(4, 4, 77);
+  color: white;
+  padding: 8px;
+}
+
+/* h1{
+  
+} */
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  flex-wrap: wrap;
+  padding: 14px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn{
+  background-color: blue;
+  color: white;
+  margin: 5px;
+  padding:5px;
+  font-size: 30px;
+}
+
+.heading{
+  color:black;
+  font-size: 70px;
+ margin: 10px;
+}
