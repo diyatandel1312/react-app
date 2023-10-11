@@ -6,7 +6,7 @@ import Header from './components/Header';
 
 
 function App() {
-const[num ,SetNum]=useState(1);
+const[num ,SetNum]=useState(0);
   
 function inc(){
   SetNum(num+1);
