@@ -1,10 +1,11 @@
-import React,{useState} from "react";
+import React from 'react'
 
-function Header(){
+ const Header = () => {
+    
 
-    return(
-        <div className="header"> 
-            <h1>UseState Hooks</h1>
+    return (
+        <div className='header'>
+           <h1> Reacord Keeping</h1>
         </div>
     )
 }
