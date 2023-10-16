@@ -14,13 +14,17 @@ function App() {
   const [data, setData]=useState([]);
 
   const addData = () =>{
+    if (name !== "" && email !== "") {
     setData([...data,{name,email}]);
     setName("");
     setEmail("");
+    }
   };
 
-  const removeItem = () =>{
-    data.splice(index,1);
+  const removeItem = (index) =>{
+    let arr=data;
+    arr.splice(index,1);
+    setData([...arr]);
   }
     
   return (
