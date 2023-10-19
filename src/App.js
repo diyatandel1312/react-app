@@ -2,69 +2,46 @@ import logo from "./logo.svg";
 import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import { element } from "prop-types";
+
 
 
 function App() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [data, setData]=useState([]);
 
-  const addData = () =>{
-    if (name !== "" && email !== "") {
-    setData([...data,{name,email}]);
-    setName("");
-    setEmail("");
-    }
-  };
+  const[isDeleting,setIsDeleting] = useState(false);
 
-  const removeItem = (index) =>{
-    let arr=data;
-    arr.splice(index,1);
-    setData([...arr]);
+  function deletedHandler(){
+    setIsDeleting(true);
   }
-    
-  return (
-    <div className="App">
+
+  function proceedHandler(){
+    setIsDeleting(false);
+  }
+  
+  let Warning;
+
+
+  if(isDeleting){
+    Warning = (
+      <div id="alert">
+      <h2>Are you sure?</h2>
+      <p>These changes can't be reverted!</p>
+      <button  onClick={proceedHandler} >Proceed</button>
+   </div>
+    )
+  }
+  return(
+    <div>
       <Header />
 
-      <div className="form">
-        <Stack spacing={2} direction="row">
-          <TextField id="outlined-basic" value={name}  onChange={(event) => setName(event.target.value)} label="Name" variant="outlined" />
-          <TextField id="outlined-basic" value={email} onChange={(event) => setEmail(event.target.value)} label="Email" variant="outlined" />
-          <Button onClick={addData} color="success" variant="contained">
-            Add 
-          </Button>
-        </Stack>
+      <div>
+        
+        <div id="delete">
+        <button  onClick={deletedHandler}>Delete</button>
+        </div>
+        {Warning}
+        </div>
       </div>
-      <div className="data">
-      <div className="data_val">
-        <h4>Name</h4>
-        <h4>Email</h4>
-        <h4>Remove</h4>
-        </div> 
-    
-       {
-        data.map((element,index) => {
-          return(
-            <div key={index} className="data_val">
-        <h4>{element.name}</h4>
-        <h4>{element.email}</h4>
-        <Stack>
-        <Button onClick={() => removeItem(index)} color="error" variant="contained">
-            Remove
-          </Button>
-          </Stack>
-        </div> 
-          )
-        })
-       }
-      </div>
-    </div>
-  );
+  )
 }
 
 export default App;

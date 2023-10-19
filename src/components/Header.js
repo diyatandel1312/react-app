@@ -5,7 +5,7 @@ import React from 'react'
 
     return (
         <div className='header'>
-           <h1> Reacord Keeping</h1>
+           <h1>Conditional Content</h1>
         </div>
     )
 }

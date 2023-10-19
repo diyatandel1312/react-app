@@ -8,17 +8,16 @@
 
 h1{
   margin: 0;
-}
+} 
 
-.header{
+ .header{
   color:white;
   background-color: #192a56;
   padding:14px;
   width: 100%;
-}
-
-
-.form{
+  text-align: center;
+} 
+ .form{
   margin-top: 20px;
 }
 
@@ -40,3 +39,72 @@ h1{
   box-shadow: rgba(100,100,111,0.2) 0px,7px,29px,0px;
 
 }
+
+
+.counter{
+  
+text-align: center;
+font-size: large;
+  
+}
+
+.button {
+ font-size: 45px;
+
+} 
+
+ body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 3rem;
+  background-color: #2d2c2c;
+  color: #959090;
+  text-align: center;
+} 
+
+ #alert {
+  margin: 3rem auto;
+  padding: 1rem;
+  width: 15rem;
+  border: 2px solid #dd3562;
+  background-color: #776167;
+  color: white;
+}
+
+#alert button {
+  font: inherit;
+  border: 1px solid black;
+  padding: 0.5rem 1.5rem;
+  background-color:#dd3562 ;
+  color: #0f0f0f;
+  cursor: pointer;
+}
+
+#delete {
+  font-size: large;
+  margin: 3rem auto;
+  padding: 1rem;
+  width: 10rem;
+  border: 2px solid #dd3562;
+  background-color: #776167;
+  color: white;
+ }
+
+ #delete button{
+  font: inherit;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  color: #0f0f0f;
+  cursor: pointer;
+  
+ } 
+
+ /* body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 3rem;
+  background-color: #2d2c2c;
+  color: #959090;
+  text-align: center;
+} */
