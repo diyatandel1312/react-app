@@ -7,41 +7,21 @@ import Header from "./components/Header";
 
 function App() {
 
-  const[isDeleting,setIsDeleting] = useState(false);
-
-  function deletedHandler(){
-    setIsDeleting(true);
-  }
-
-  function proceedHandler(){
-    setIsDeleting(false);
+  const[color , setColor]=useState(false)
+    
+  function colorChange(){
+      setColor(isColor =>!isColor);
   }
   
-  let Warning;
-
-
-  if(isDeleting){
-    Warning = (
-      <div id="alert">
-      <h2>Are you sure?</h2>
-      <p>These changes can't be reverted!</p>
-      <button  onClick={proceedHandler} >Proceed</button>
-   </div>
-    )
-  }
-  return(
-    <div>
-      <Header />
-
+  return (
       <div>
-        
-        <div id="delete">
-        <button  onClick={deletedHandler}>Delete</button>
-        </div>
-        {Warning}
-        </div>
+          <h1 style={{color : color ? 'red' :'white'}}>Style me!</h1>
+          <button style={{fontSize:30}} onClick={colorChange}>Toggle style</button>
+          <div>
+    <Header />
+            </div>
       </div>
-  )
+  );
 }
 
 export default App;
